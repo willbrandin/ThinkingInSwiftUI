@@ -11,7 +11,10 @@
 		CE859C992799F58E009EA85F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859C982799F58E009EA85F /* ContentView.swift */; };
 		CE859C9B2799F590009EA85F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE859C9A2799F590009EA85F /* Assets.xcassets */; };
 		CE859C9E2799F590009EA85F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE859C9D2799F590009EA85F /* Preview Assets.xcassets */; };
-		CE859CA62799F5C5009EA85F /* 1-StartWithMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CA52799F5C5009EA85F /* 1-StartWithMock.swift */; };
+		CE859CA62799F5C5009EA85F /* 0-StartWithMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CA52799F5C5009EA85F /* 0-StartWithMock.swift */; };
+		CE859CA82799FB7F009EA85F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CA72799FB7F009EA85F /* Model.swift */; };
+		CE859CAA2799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CA92799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift */; };
+		CE859CAC2799FE25009EA85F /* 2-CreateStaticVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CAB2799FE25009EA85F /* 2-CreateStaticVersion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +23,10 @@
 		CE859C982799F58E009EA85F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE859C9A2799F590009EA85F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE859C9D2799F590009EA85F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CE859CA52799F5C5009EA85F /* 1-StartWithMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1-StartWithMock.swift"; sourceTree = "<group>"; };
+		CE859CA52799F5C5009EA85F /* 0-StartWithMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "0-StartWithMock.swift"; sourceTree = "<group>"; };
+		CE859CA72799FB7F009EA85F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		CE859CA92799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1-BreakIntoComponentHierarchy.swift"; sourceTree = "<group>"; };
+		CE859CAB2799FE25009EA85F /* 2-CreateStaticVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2-CreateStaticVersion.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 				CE859C982799F58E009EA85F /* ContentView.swift */,
 				CE859C9A2799F590009EA85F /* Assets.xcassets */,
 				CE859C9C2799F590009EA85F /* Preview Content */,
+				CE859CA72799FB7F009EA85F /* Model.swift */,
 			);
 			path = ThinkingInSwiftUI;
 			sourceTree = "<group>";
@@ -73,7 +80,9 @@
 		CE859CA42799F5B6009EA85F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CE859CA52799F5C5009EA85F /* 1-StartWithMock.swift */,
+				CE859CA52799F5C5009EA85F /* 0-StartWithMock.swift */,
+				CE859CA92799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift */,
+				CE859CAB2799FE25009EA85F /* 2-CreateStaticVersion.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,9 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE859CAC2799FE25009EA85F /* 2-CreateStaticVersion.swift in Sources */,
+				CE859CAA2799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift in Sources */,
 				CE859C992799F58E009EA85F /* ContentView.swift in Sources */,
-				CE859CA62799F5C5009EA85F /* 1-StartWithMock.swift in Sources */,
+				CE859CA62799F5C5009EA85F /* 0-StartWithMock.swift in Sources */,
 				CE859C972799F58E009EA85F /* ThinkingInSwiftUIApp.swift in Sources */,
+				CE859CA82799FB7F009EA85F /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

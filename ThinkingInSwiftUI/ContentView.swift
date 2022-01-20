@@ -9,19 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var welcomeView: some View {
+        StartWithMockView()
+    }
+    
     var navigationList: some View {
         List {
-            NavigationLink("Start with a Mock", destination: StartWithMockView())
+            NavigationLink("0 - Start with a Mock", destination: welcomeView)
+            NavigationLink("1 - Break Into Component Hierarchy", destination: BreakIntoComponentsView())
+            NavigationLink("2 - Create Static Version", destination: CreateStaticVersionView())
         }
+        .navigationTitle("Thinking in SwiftUI")
     }
     
     var body: some View {
         NavigationView {
             navigationList
-            
-            VStack {
-                Text("Welcome!")
-            }
+            welcomeView
         }
     }
 }
