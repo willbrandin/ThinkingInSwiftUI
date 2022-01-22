@@ -2,19 +2,39 @@ import SwiftUI
 
 struct CreateStaticVersionView: View {
     
+    @Environment(\.colorScheme) var colorScheme: ColorScheme
+    
+    private let url: URL = URL(string: "https://raw.githubusercontent.com/willbrandin/ThinkingInSwiftUI/main/ThinkingInSwiftUI/Views/MasterViews/FilteredListComponents.swift")!
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("For now, let's not worry about any data or interactions. Let's just get hard coded elements coded on the screen.")
                 Text("Remembering the components from earlier, we can start by building these out with the properties they need.")
+                
+                
             }
             .padding()
             
+            Button(
+                action: {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            ) {
+                HStack {
+                    Image("gitLogo")
+                    Text("View on GitHub")
+                        .bold()
+                        .foregroundColor(colorScheme == .light ? .white : .black)
+                }
+                .padding(8)
+                .padding(.horizontal, 16)
+                .background(colorScheme == .light ? .black : .white)
+                .cornerRadius(16)
+            }
+            
             FilterableProductTable()
                 .allowsHitTesting(false)
-            
-            
-            
         }
         .navigationTitle("Create Static Version")
     }

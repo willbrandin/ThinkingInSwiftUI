@@ -21,7 +21,7 @@ struct BreakIntoComponentsView: View {
             VStack(alignment: .leading) {
                 Text("Quick tip!")
                 Text("It is recommended that views should be split into components.")
-                Text("`VStack`, `HSTack`, and `ZStack` all can have a max of 10 views! ")
+                Text("`VStack`, `HSTack`, and `ZStack` can only have a max of 10 views! ")
             }
             .padding()
             .background(.thinMaterial)
