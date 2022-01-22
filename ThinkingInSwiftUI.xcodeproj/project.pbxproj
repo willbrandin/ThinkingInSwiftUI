@@ -15,6 +15,7 @@
 		CE859CA82799FB7F009EA85F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CA72799FB7F009EA85F /* Model.swift */; };
 		CE859CAA2799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CA92799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift */; };
 		CE859CAC2799FE25009EA85F /* 2-CreateStaticVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE859CAB2799FE25009EA85F /* 2-CreateStaticVersion.swift */; };
+		CEF15BC4279CBCB700FBAC37 /* FilteredListComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF15BC3279CBCB700FBAC37 /* FilteredListComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CE859CA72799FB7F009EA85F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		CE859CA92799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1-BreakIntoComponentHierarchy.swift"; sourceTree = "<group>"; };
 		CE859CAB2799FE25009EA85F /* 2-CreateStaticVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2-CreateStaticVersion.swift"; sourceTree = "<group>"; };
+		CEF15BC3279CBCB700FBAC37 /* FilteredListComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredListComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +61,12 @@
 		CE859C952799F58E009EA85F /* ThinkingInSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				CE859CA72799FB7F009EA85F /* Model.swift */,
 				CE859CA42799F5B6009EA85F /* Views */,
 				CE859C962799F58E009EA85F /* ThinkingInSwiftUIApp.swift */,
 				CE859C982799F58E009EA85F /* ContentView.swift */,
 				CE859C9A2799F590009EA85F /* Assets.xcassets */,
 				CE859C9C2799F590009EA85F /* Preview Content */,
-				CE859CA72799FB7F009EA85F /* Model.swift */,
 			);
 			path = ThinkingInSwiftUI;
 			sourceTree = "<group>";
@@ -80,11 +82,20 @@
 		CE859CA42799F5B6009EA85F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEF15BC2279CBCA100FBAC37 /* MasterViews */,
 				CE859CA52799F5C5009EA85F /* 0-StartWithMock.swift */,
 				CE859CA92799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift */,
 				CE859CAB2799FE25009EA85F /* 2-CreateStaticVersion.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEF15BC2279CBCA100FBAC37 /* MasterViews */ = {
+			isa = PBXGroup;
+			children = (
+				CEF15BC3279CBCB700FBAC37 /* FilteredListComponents.swift */,
+			);
+			path = MasterViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				CE859CAA2799FBC9009EA85F /* 1-BreakIntoComponentHierarchy.swift in Sources */,
 				CE859C992799F58E009EA85F /* ContentView.swift in Sources */,
 				CE859CA62799F5C5009EA85F /* 0-StartWithMock.swift in Sources */,
+				CEF15BC4279CBCB700FBAC37 /* FilteredListComponents.swift in Sources */,
 				CE859C972799F58E009EA85F /* ThinkingInSwiftUIApp.swift in Sources */,
 				CE859CA82799FB7F009EA85F /* Model.swift in Sources */,
 			);
