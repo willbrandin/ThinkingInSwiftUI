@@ -29,6 +29,15 @@ struct BreakIntoComponentsView: View {
             .padding(.bottom)
             
             VStack {
+                /// All of these views seem to have a pattern.
+                /// The each have a:
+                /// - Color used to denote a particular view
+                /// - Formatted title
+                /// - Documentation of the particular view
+                /// - a Static version of the view itself
+                ///
+                /// Might be worth exploring how even this could be a new ``View``. 🤔
+                ///
                 VStack {
                     HStack(alignment: .top) {
                         Color.red.frame(width: 30, height: 30)
