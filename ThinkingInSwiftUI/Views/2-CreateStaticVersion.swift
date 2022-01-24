@@ -4,7 +4,7 @@ struct CreateStaticVersionView: View {
     
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
-    private let url: URL = URL(string: "https://raw.githubusercontent.com/willbrandin/ThinkingInSwiftUI/main/ThinkingInSwiftUI/Views/MasterViews/FilteredListComponents.swift")!
+    private let url: URL = URL(string: "https://github.com/willbrandin/ThinkingInSwiftUI/blob/main/ThinkingInSwiftUI/Views/MasterViews/FilteredListComponents.swift")!
     
     var body: some View {
         ScrollView {
