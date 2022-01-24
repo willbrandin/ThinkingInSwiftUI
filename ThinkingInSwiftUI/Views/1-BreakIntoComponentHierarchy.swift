@@ -13,8 +13,6 @@ struct BreakIntoComponentsView: View {
                 Text("If necessary, it may be helpful to create a new model for your SwiftUI View. This model and UI should have a similar information architecture, where each component refers to a part of the data model.")
                 
                 Text("Below, is a breakdown of this component hierarchy and lists out what properties each needs.")
-                
-                Spacer()
             }
             .padding(.horizontal)
             

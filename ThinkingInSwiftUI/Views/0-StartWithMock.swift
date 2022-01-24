@@ -8,10 +8,10 @@ struct StartWithMockView: View {
                 """
                 struct Model {
                     // An enum of product categories
-                    public var category: Category
-                    public var price: String
-                    public var stocked: Bool
-                    public var name: String
+                    var category: Category
+                    var price: String
+                    var stocked: Bool
+                    var name: String
                 }
                 """
             )
@@ -24,16 +24,21 @@ struct StartWithMockView: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading) {
-                Text("Today, we will walkthrough some basics with SwiftUI and breakdown how we may build this feature")
-                Text("Let's imagine we have this design with the following model.")
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("Today, we will walkthrough some basics with SwiftUI and breakdown how we may build this feature")
+                    Text("Let's imagine we have this design with the following model.")
+                }
+                
+                Spacer()
             }
-            .padding()
+            .padding(.horizontal)
             
             HStack(alignment: .top) {
                 modelView
                     .padding(.top) /// Account for ``FilterableProductTable`` padding
                 FilterableProductTable()
+                Spacer()
             }
             .padding(.horizontal)
 
