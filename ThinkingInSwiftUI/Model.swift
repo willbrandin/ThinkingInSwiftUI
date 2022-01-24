@@ -11,20 +11,20 @@ public let mockedList = [
     Model(category: .sportingGoods, price: "$49.99", stocked: true, name: "Football"),
     Model(category: .sportingGoods, price: "$9.99", stocked: true, name: "Baseball"),
     Model(category: .sportingGoods, price: "$29.99", stocked: false, name: "Basketball"),
-    Model(category: .electronic, price: "$99.99", stocked: true, name: "iPod Touch"),
-    Model(category: .electronic, price: "$399.99", stocked: false, name: "iPhone 5"),
-    Model(category: .electronic, price: "$199.99", stocked: true, name: "Nexus"),
+    Model(category: .electronics, price: "$99.99", stocked: true, name: "iPod Touch"),
+    Model(category: .electronics, price: "$399.99", stocked: false, name: "iPhone 5"),
+    Model(category: .electronics, price: "$199.99", stocked: true, name: "Nexus"),
 ]
 
 public struct Model: Identifiable {
     
     public enum Category {
-        case electronic
+        case electronics
         case sportingGoods
         
         public var title: String {
             switch self {
-            case .electronic:
+            case .electronics:
                 return "Electronics"
             case .sportingGoods:
                 return "Sporting Goods"
