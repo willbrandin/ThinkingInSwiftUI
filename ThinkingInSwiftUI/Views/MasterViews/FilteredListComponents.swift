@@ -72,9 +72,11 @@ struct ProductTable: View {
             .padding(.top, 4)
             
             ForEach(sections, id: \.self) { section in
-                ProductCategoryRow(title: section.title, bordered: bordered)
-                ForEach(listItems.filter({ $0.category == section })) { item in
-                    ProductRow(item: item, bordered: bordered)
+                if !listItems.filter({ $0.category == section }).isEmpty {
+                    ProductCategoryRow(title: section.title, bordered: bordered)
+                    ForEach(listItems.filter({ $0.category == section })) { item in
+                        ProductRow(item: item, bordered: bordered)
+                    }
                 }
             }
         }
