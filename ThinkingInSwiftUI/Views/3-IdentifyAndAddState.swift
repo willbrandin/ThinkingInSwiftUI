@@ -20,19 +20,23 @@ struct IdentifyStateView: View {
                     VStack(alignment: .leading) {
                         Text("How do we determine what is State?")
                             .font(.title3)
-                            .padding(.vertical)
+                            .padding(.top)
+                            .padding(.bottom, 8)
+                        
                         Text("Here are a few guidelines for determining if a peice of data is state:")
+                        
                         VStack(alignment: .leading) {
-                            Text("1. Can this be passed in via a parent View? If so, probably _not_ State.")
-                            Text("2. Is it changing? If not, probably _not_ state.")
+                            Text("1. Can this data be passed in via a parent View? If so, probably _not_ State.")
+                            Text("2. Is it going to change over time? If not, probably _not_ state.")
                             Text("3. Is it possible to compute the data from other state or properties? _Not state_.")
                         }
                         .padding()
                         
                         Text("Let's go through the data in our feature.")
                             .font(.title3)
-                            .padding(.vertical)
-                        
+                            .padding(.top)
+                            .padding(.bottom, 8)
+
                         VStack(alignment: .leading) {
                             Text("Our list of products itself does not change. It remains unchanged, we can pass it in via a property. The `SearchBar` and `Toggle (UISwitch`) will change over time and cannot be calculated from other data so these are our state. The list filtering can be computed via this state.")
                         }
@@ -87,7 +91,6 @@ struct IdentifyStateView: View {
                             Spacer()
                         }
                         
-                        Text("We would expect the list to filter out items out of stock, and it should search for 'Baseball'.")
                     }
                     
                     Spacer()
@@ -95,6 +98,14 @@ struct IdentifyStateView: View {
                 
             }
             .padding()
+            
+            HStack {
+                Text("We would expect the list to filter out items out of stock, and it should search for 'Baseball'.")
+                    .padding(.horizontal)
+                
+                Spacer()
+            }
+            .padding(.top)
             
             FilterableProductTable(text: "Baseball", showingInStockItems: true)
                 .padding(.bottom, 64)
