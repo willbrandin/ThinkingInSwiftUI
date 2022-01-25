@@ -115,6 +115,16 @@ struct FilterableProductTable: View {
     @State private var showingInStockItems: Bool = false
     
     var bordered: Bool = false
+    
+    init(
+        text: String = "",
+        showingInStockItems: Bool = false,
+        bordered: Bool = false
+    ) {
+        self._text = State(wrappedValue: text)
+        self._showingInStockItems = State(wrappedValue: showingInStockItems)
+        self.bordered = bordered
+    }
 
     var body: some View {
         VStack(spacing: 4) {
