@@ -14,7 +14,8 @@ struct ContentView: View {
             NavigationLink("0 - Start with a Mock", destination: StartWithMockView())
             NavigationLink("1 - Break Into Component Hierarchy", destination: BreakIntoComponentsView())
             NavigationLink("2 - Create Static Version", destination: CreateStaticVersionView())
-            NavigationLink("3 - Identify and Add State", destination: IdentifyStateView())
+            NavigationLink("3 - Identify State", destination: IdentifyStateView())
+            NavigationLink("4- Add State", destination: AddStateView())
         }
         .navigationTitle("Thinking in SwiftUI")
         .navigationBarTitleDisplayMode(.inline)

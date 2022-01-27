@@ -35,8 +35,7 @@ struct CreateStaticVersionView: View {
                 .cornerRadius(16)
             }
             
-            FilterableProductTable()
-                .allowsHitTesting(false)
+            StaticFilterableProductTable()
         }
         .navigationTitle("Create Static Version")
     }

@@ -1,5 +1,7 @@
 import SwiftUI
 
+// MARK: - Components
+
 /// Displays the `Model` title and price in a list item
 struct ProductRow: View {
     var item: Model
@@ -83,6 +85,62 @@ struct ProductTable: View {
         .border(bordered ? .purple : .clear)
     }
 }
+
+// MARK: - Static Mocks
+
+/// Static version of our ``SearchBar``
+///
+/// Because SwiftUI `TextField` and `Toggle` require bindings
+/// we can pass in `.constant(Value)` to mock a binding.
+/// Please note that this is mocked binding will not change values.
+struct StaticSearchBar: View {
+    var bordered: Bool = false
+    
+    var body: some View {
+        VStack {
+            TextField("Filter", text: .constant(""))
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+
+            Toggle("Only show items in stock", isOn: .constant(false))
+        }
+        .border(bordered ? .green : .clear)
+    }
+}
+
+/// Static version of ``FilterableProductTable``
+struct StaticFilterableProductTable: View {
+ 
+    var bordered: Bool = false
+ 
+    var body: some View {
+        VStack(spacing: 4) {
+            /// State being passed as a binding.
+            /// ``SearchBar`` feeds it's state back up into ``FilterableProductTable``
+            ///
+            /// For a static version:
+            /// You can use ``.constant(Value)`` to mock a binding.
+            /// This will not be interactable but it's perfect for mocking up designs.
+            /// We can also use ``allowsHitTesting(false`` to disable all touchable interactions.
+            /// ``SearchBar(text: .constant(""), showingInStockItems: .constant(false), bordered: bordered)``
+            ///
+            StaticSearchBar(bordered: bordered)
+            
+            /// ``ProductTable`` only needs to read the state, not mutate it.
+            /// Therefore we can pass state as properties and omit the `$`
+            ProductTable(items: mockedList, filteredText: "", showingInStockItems: false, bordered: bordered)
+        }
+        .padding()
+        .background(Color(.systemBackground))
+        .cornerRadius(16)
+        .frame(width: 300)
+        .border(bordered ? .red : .clear)
+        .padding()
+        .shadow(radius: 3)
+    }
+}
+
+// MARK: - Stateful Properies
+
 
 /// Product search bar
 /// Responsible for:
