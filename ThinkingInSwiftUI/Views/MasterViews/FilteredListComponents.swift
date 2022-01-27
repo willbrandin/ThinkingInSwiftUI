@@ -45,7 +45,7 @@ struct ProductTable: View {
     var bordered: Bool = false
     
     var listItems: [Model] {
-        var list = mockedList
+        var list = items
         
         if !filteredText.isEmpty {
             list = list.filter({ $0.name.lowercased().contains(filteredText.lowercased()) })

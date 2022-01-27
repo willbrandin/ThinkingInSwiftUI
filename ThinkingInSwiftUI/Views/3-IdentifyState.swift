@@ -109,6 +109,7 @@ struct IdentifyStateView: View {
             
             FilterableProductTable(text: "Baseball", showingInStockItems: true)
                 .padding(.bottom, 64)
+                .allowsHitTesting(false)
         }
         .navigationTitle("Identify State")
     }

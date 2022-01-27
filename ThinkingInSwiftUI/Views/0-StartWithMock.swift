@@ -26,7 +26,7 @@ struct StartWithMockView: View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Today, we will walkthrough some basics with SwiftUI and breakdown how we may build this feature")
+                    Text("Today, we will walkthrough some basics of data flow in SwiftUI and think about how we may build this feature.")
                     Text("Let's imagine we have this design with the following model.")
                 }
                 

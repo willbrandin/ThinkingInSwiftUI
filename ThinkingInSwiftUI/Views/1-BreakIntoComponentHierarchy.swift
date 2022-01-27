@@ -47,8 +47,7 @@ struct BreakIntoComponentsView: View {
                         Spacer()
                     }
                     
-                    FilterableProductTable(bordered: true)
-                        .allowsHitTesting(false)
+                    StaticFilterableProductTable(bordered: true)
                 }
                 
                 VStack {
@@ -64,8 +63,7 @@ struct BreakIntoComponentsView: View {
                         Spacer()
                     }
                     
-                    SearchBar(text: .constant("Football"), showingInStockItems: .constant(true), bordered: true)
-                        .allowsHitTesting(false)
+                    StaticSearchBar(bordered: true)
                         .frame(width: 300)
                 }
                 
@@ -75,7 +73,7 @@ struct BreakIntoComponentsView: View {
                         VStack(alignment: .leading) {
                             Text("`ProductTable`")
                                 .bold()
-                            Text("The product table requires the list as it's input. It's parent component (`FilterableProductTable`) will be responsible for filtering the list.")
+                            Text("The product table requires the list as it's input. It also requires the filter text and the `Bool` for whether or not to show out of stock items.")
                         }
                         Spacer()
                     }
